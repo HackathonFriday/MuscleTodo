@@ -23,6 +23,10 @@ input[type="text"]{
 	border: 1px solid #a9a9a9; /* 枠線 */
 	background-color: #fff; /* 背景色 */
 }
+	::placeholder{
+		color: #a9a9a9;
+		font-size: 0.8em;
+	}
 
 .radio_button{
 margin: 0px, 5px;
@@ -36,4 +40,5 @@ input[type="submit"]{
 	font-size: 10px;
 	width: 100px;
 	height: 30px;
+	cursor: pointer;
 }
