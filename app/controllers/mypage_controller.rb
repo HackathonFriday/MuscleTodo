@@ -1,5 +1,13 @@
 class MypageController < ApplicationController
   def show
+    # ユーザー取得
+    token = cookies[:token]
+    @user = User.find_by(token: token)
+
+    if @user.nil?
+      redirect_to home_index_path
+    end
+
     # マッチョモーダル用の変数取得
     is_creation_flg = false; # テスト用にタスク作成時と完了時のフラグをここで設定
 
@@ -18,9 +26,6 @@ class MypageController < ApplicationController
 
     #カテゴリーモーダル用
     @category_modal = Category.new
-    # ユーザー取得
-    token = cookies[:token]
-    @user = User.find_by(token: token)
 
     # タスク完了前の経験値
     @old_exp = 80
