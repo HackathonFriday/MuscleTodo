@@ -1,0 +1,34 @@
+<div class="modal">
+    <div class="background">
+        <div class="contents">
+            <p class="title">
+                タスク登録
+            </p>
+            <div class="mainarea">
+                <div class="input_area">
+                    <%= form_with model:@tasks_modal, url:mypage_show_path(@tasks_modal), local: true do |f| %>
+                    <div class="input_parts">
+                        <%= f.label :title, 'タイトル', class:'input_label' %>
+                        <%= f.text_field :title, class:'input_form' %>
+                    </div>
+                    <div class="input_parts">
+                        <%= f.label :category_id, 'カテゴリ', class:'input_label' %>
+                        <%= f.select :category_id, [['HTML', 1], ['CSS', 2], ['Ruby', 3]], class:'input_form' %>
+                    </div>
+                    <div class="input_parts">
+                        <%= f.label :note, '内容', class:'input_label' %>
+                        <%= f.text_area :note, class:'input_form' %>
+                    </div>
+                    <div class="input_parts">
+                        <%= f.label :expire_date, '内容', class:'input_label' %>
+                        <%= f.text_field :expire_date, class:'input_limit' %>
+                    </div>
+                    <div class="input_parts">
+                        <%= f.submit '送信する' %>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
