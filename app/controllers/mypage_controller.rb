@@ -17,12 +17,14 @@ class MypageController < ApplicationController
     # ここまで
 
      # 未完了タスク一覧
-    @incompolete_task_list = Task.where(Task.where(id: params[:id])).or(is_done: false)
+     cookie[:token] = 'testtest'
+    @incompolete_task_list = Task.where(Task.where(token: cookie[token])).to_a
     # 完了タスク一覧
-    @compolete_task_list = Task.where(Task.where(id: params[:id])).or(is_done: true)
+    @compolete_task_list = Task.where(Task.where(token: cookie[token])).to_a
   end
 
   def create
+    byebug
     @task = Task.create(task_params)
     redirect_to mypage_show_path
     # TODO: 経験値加算処理追加
@@ -30,6 +32,7 @@ class MypageController < ApplicationController
 
   private
     def task_params
-      params.require(:task).permit(:title, :note, :category_id, :user_id)
+      byebug
+      params.require(:task).permit(:title, :note, :category_id,)
     end
 end

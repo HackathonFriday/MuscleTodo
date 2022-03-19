@@ -25,6 +25,7 @@
                         <%= f.label :expire_date, '期日', class:'input_label' %>
                         <div class="submit_area">
                             <%= f.date_field :expire_date, class:'input_limit' %>
+                            <%= f.hidden_field :user_id, :value => @user_id %>
                             <%= f.submit '送信する', class:'input_submit' %>
                         </div>
                     </div>
