@@ -27,7 +27,7 @@
 				</div>
 			</div>
 			<div class="not_done_task">
-				<%= @no_complete_task_list.each do |n| %>
+				<% @no_complete_task_list.each do |n| %>
 				<div class="task_info">
 					<div class="task_detail">
 						<p><%= n[:title]%> | <%= n[:category_id]%></p>
@@ -41,6 +41,7 @@
 						<button>完了にする</button>
 					</div>
 				</div>
+				<% end %>
 
 			<div class="done_task">
 				<%= @complete_task_list.each do |c| %>
@@ -53,8 +54,10 @@
 						</div>
 					</div>
 				</div>
+				<% end %>
 			</div>
 		</div>
+		<button class="create_task">タスク追加</button>
 	</section>
 </div>
 <%= render partial: 'macho_modal', macho_modal: @macho_modal %>

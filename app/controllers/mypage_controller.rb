@@ -24,9 +24,10 @@ class MypageController < ApplicationController
     @old_exp = 80
 
     # タスク一覧の取得
-    task_list = Task.eager_load(:category, :user).where(token: cookies[token])
-    @no_complete_task_list = task_list.where(is_done: false);
-    @complete_task_list = task_list.where(is_done: true);
+    task_list = Task.eager_load(:category, :user).where(user_id: @user.id)
+    @no_complete_task_list = task_list.where(is_done: false).to_a;
+    @complete_task_list = task_list.where(is_done: true).to_a;
+    byebug
   end
 
   def create
@@ -39,6 +40,6 @@ class MypageController < ApplicationController
   private
     def task_params
       byebug
-      params.require(:task).permit(:title, :note, :category_id,)
+      params.permit(:title, :note, :category_id,)
     end
 end
