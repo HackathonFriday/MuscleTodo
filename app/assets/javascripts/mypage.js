@@ -7,12 +7,18 @@ $(function () {
     $('.background').on('click', function() {
         $('.macho_modal').css('display', 'none');
         $('.task_modal').css('display', 'none');
+        $('.category_modal').css('display', 'none');
         return false;
     })
 
     $('.contents').on('click', function(event){
         event.stopPropagation();
     })
+
+    $('.input_submit').on('click', function(event){
+        event.stopPropagation();
+    })
+
 
     $('.task_contents').on('click', function(event){
         event.stopPropagation();

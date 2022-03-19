@@ -6,7 +6,7 @@
             </p>
             <div class="input">
                 <div class="input_area">
-                    <%= form_with model:@tasks_modal, url:mypage_show_path(@tasks_modal), local: true do |f| %>
+                    <%= form_with model:@category_modal, url:categories_create_path(@category_modal), local: true do |f| %>
                         <div class="input_parts">
                             <%= f.label :name, 'カテゴリ名', class:'input_label' %>
                             <%= f.text_field :name, class:'input_form' %>
