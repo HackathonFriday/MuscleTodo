@@ -7,7 +7,6 @@
 		<div class="user">
 			<div class="user_name"><%= @user.name %></div>
 			<div class="user_level">Lv.<%= @user.exp / 100 + 1 %></div>
-			<%# TODO exp周りの値を動的にする %>
 			<div id="exp_container" data-current-exp="<%= @user.exp %>" data-old-exp="<%= @old_exp %>"></div>
 		</div>
 	</div>
