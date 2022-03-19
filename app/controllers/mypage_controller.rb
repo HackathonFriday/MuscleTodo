@@ -18,5 +18,11 @@ class MypageController < ApplicationController
 
     #カテゴリーモーダル用
     @category_modal = Category.new
+    # ユーザー取得
+    token = cookies[:token]
+    @user = User.find_by(token: token)
+
+    # タスク完了前の経験値
+    @old_exp = 80
   end
 end
