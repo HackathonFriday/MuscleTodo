@@ -1,3 +1,39 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+div.box{
+	margin: 50vh auto 0;
+	transform: translateY(-50%);
+	padding: 1em;
+	width: 30%;
+	border: 1px solid #ccc; /* 枠線 */
+	background-color: #fff; /* 背景色 */
+	box-shadow: 1px 1px 2px #ccc;
+}
+h2{
+	text-align: center;
+}
+
+.field{
+	margin: 15px;
+}
+
+.name{
+	margin-bottom: 15px;
+}
+input[type="text"]{
+	min-height: 30px;
+	border: 1px solid #a9a9a9; /* 枠線 */
+	background-color: #fff; /* 背景色 */
+}
+
+.radio_button{
+margin: 0px, 5px;
+}
+
+.register{
+	margin: 10px;
+	text-align: right;
+}
+input[type="submit"]{
+	font-size: 10px;
+	width: 100px;
+	height: 30px;
+}
