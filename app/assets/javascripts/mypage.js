@@ -5,7 +5,8 @@ $(function () {
     })
 
     $('.background').on('click', function() {
-        $('.modal').css('display', 'none');
+        $('.macho_modal').css('display', 'none');
+        $('.task_modal').css('display', 'none');
         return false;
     })
 
@@ -15,5 +16,9 @@ $(function () {
 
     $('.task_contents').on('click', function(event){
         event.stopPropagation();
+    })
+
+    $('.create_task').on('click', function(){
+        $('.task_modal').toggle();
     })
 })
