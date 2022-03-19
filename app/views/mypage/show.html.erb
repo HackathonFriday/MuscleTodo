@@ -1,27 +1,25 @@
-<%# <body class="my_page" width="1000" margin="100 100"> %>
-	<header class="header">
-		ここにヘッダー
-	</header>
-	<div class="body">
-		<section class="graph">
-			<div class="graph_area">
-				<div class="graph1">
-					ここに棒?グラフ<br>
-					<%= image_tag "sample_bar_graph" %>
-				</div>
-				<div class="graph2">
-					ここに円?グラフ<br>
-					<%= image_tag "sample_circle_graph" %>
-				</div>
+<header class="header">
+	ここにヘッダー
+</header>
+<div class="body">
+	<section class="graph">
+		<div class="graph_area">
+			<div class="graph1">
+				ここに棒?グラフ<br>
+				<%= image_tag "sample_bar_graph" %>
 			</div>
-		</section>
-		<section class="task_tab">
-			<div class="task_list">
-				<div class="incomplete_task_list">ここに未完了タスクリスト</div>
-				<div class="complete_task_list">ここに完了タスクリスト</div>
+			<div class="graph2">
+				ここに円?グラフ<br>
+				<%= image_tag "sample_circle_graph" %>
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
+	<section class="task_tab">
+		<div class="task_list">
+			<div class="incomplete_task_list">ここに未完了タスクリスト</div>
+			<div class="complete_task_list">ここに完了タスクリスト</div>
+		</div>
+	</section>
+</div>
 
-    <%= render partial: 'modal', modal_data: @modal_data %>
-<%# </body> %>
+<%= render partial: 'modal', modal_data: @modal_data %>
