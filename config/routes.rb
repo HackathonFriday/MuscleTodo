@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'api/fetch_task'
+
   get 'mypage/show'
 
   get 'home/index'
