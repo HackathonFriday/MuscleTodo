@@ -7,7 +7,8 @@
 		<div class="user">
 			<div class="user_name">テスト太郎</div>
 			<div class="user_level">Lv.54</div>
-			<div class="user_level_bar">ここにバーが来る</div>
+			<%# TODO exp周りの値を動的にする %>
+			<div id="exp_container" data-exp="70" data-overflow="20"></div>
 		</div>
 	</div>
 </header>
@@ -17,10 +18,124 @@
 	</section>
 	<section class="task_tab">
 		<div class="task_list">
-			<div class="incomplete_task_list">ここに未完了タスクリスト</div>
-			<div class="complete_task_list">ここに完了タスクリスト</div>
+			<div class="button_area">
+				<div class="done_not">
+					未完了
+				</div>
+				<div class="done">
+					完了済
+				</div>
+			</div>
+			<div class="not_done_task">
+				<div class="task_info">
+					<div class="task_detail">
+						<p>未完了のタスク名 | カテゴリ</p>
+						<div class="comment">
+							<p>内容：</p>
+							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
+						</div>
+					</div>
+					<div class="second_info">
+						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
+						<button>完了にする</button>
+					</div>
+				</div>
+				<div class="task_info">
+					<div class="task_detail">
+						<p>タスク名 | カテゴリ</p>
+						<div class="comment">
+							<p>内容：</p>
+							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
+						</div>
+					</div>
+					<div class="second_info">
+						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
+						<button>完了にする</button>
+					</div>
+				</div>
+				<div class="task_info">
+					<div class="task_detail">
+						<p>タスク名 | カテゴリ</p>
+						<div class="comment">
+							<p>内容：</p>
+							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
+						</div>
+					</div>
+					<div class="second_info">
+						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
+						<button>完了にする</button>
+					</div>
+				</div>
+				<div class="task_info">
+					<div class="task_detail">
+						<p>タスク名 | カテゴリ</p>
+						<div class="comment">
+							<p>内容：</p>
+							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
+						</div>
+					</div>
+					<div class="second_info">
+						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
+						<button>完了にする</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="done_task">
+				<div class="task_info">
+					<div class="task_detail">
+						<p>完了済みのタスク名 | カテゴリ</p>
+						<div class="comment">
+							<p>内容：</p>
+							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
+						</div>
+					</div>
+					<div class="second_info">
+						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
+						<button>完了にする</button>
+					</div>
+				</div>
+				<div class="task_info">
+					<div class="task_detail">
+						<p>タスク名 | カテゴリ</p>
+						<div class="comment">
+							<p>内容：</p>
+							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
+						</div>
+					</div>
+					<div class="second_info">
+						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
+						<button>完了にする</button>
+					</div>
+				</div>
+				<div class="task_info">
+					<div class="task_detail">
+						<p>タスク名 | カテゴリ</p>
+						<div class="comment">
+							<p>内容：</p>
+							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
+						</div>
+					</div>
+					<div class="second_info">
+						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
+						<button>完了にする</button>
+					</div>
+				</div>
+				<div class="task_info">
+					<div class="task_detail">
+						<p>タスク名 | カテゴリ</p>
+						<div class="comment">
+							<p>内容：</p>
+							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
+						</div>
+					</div>
+					<div class="second_info">
+						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
+						<button>完了にする</button>
+					</div>
+				</div>
+			</div>
 		</div>
-		<button class="create_task">タスク追加</button>
 	</section>
 </div>
 

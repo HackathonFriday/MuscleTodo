@@ -22,16 +22,17 @@
         "@babel/core": "^7.13.10",
         "@babel/preset-env": "^7.13.12",
         "babel-loader": "^8.2.2",
+        "chart.js": "^2.9.3",
         "css-loader": "^5.2.0",
-        "mini-css-extract-plugin": "^1.4.0",
-        "sass": "^1.32.8",
-        "sass-loader": "^11.0.1",
         "glob": "^7.2.0",
         "lodash-es": "^4.17.21",
+        "mini-css-extract-plugin": "^1.4.0",
+        "progressbar.js": "^1.1.0",
+        "sass": "^1.32.8",
+        "sass-loader": "^11.0.1",
+        "terser-webpack-plugin": "^4.2.2",
         "webpack": "^5.30.0",
         "webpack-cli": "^4.6.0",
-        "webpack-merge": "^5.7.3",
-        "terser-webpack-plugin": "^4.2.2",
-        "chart.js": "^2.9.3"
+        "webpack-merge": "^5.7.3"
     }
 }

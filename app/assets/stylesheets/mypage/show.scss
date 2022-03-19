@@ -3,108 +3,253 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import './_modal.scss';
+@import './_api.scss';
 @import './_task_modal.scss';
 
-body{
-	margin: 0;
+body {
+    margin: 0;
 }
 
-div.body{
-	margin: auto;
+div.body {
+    margin: auto;
 }
 
 header {
-	width: 65%;
-	height: 90px;
-	margin: 0px auto;
+    width: 65%;
+    height: 90px;
+    margin: 0px auto;
 }
 
 .header {
-	display: flex;
-	flex-wrap: wrap;
-	min-height: 100%;
-	padding: 1px 0 22px 0;
-	margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100%;
+    padding: 1px 0 22px 0;
+    margin: 0 auto;
 
-	&_logo {
-		margin-right: 15px;
-		width: 120px;
-	}
+    &_logo {
+        margin-right: 15px;
+        width: 120px;
+    }
 }
 
 .user {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	width: 990px;
-	margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 990px;
+    margin: 0 auto;
 
-	&_name {
-		width: 300px;
-		font-size: 1.8em;
-		padding: 5px 10px;
-	}
+    &_name {
+        width: 300px;
+        font-size: 1.8em;
+        padding: 5px 10px;
+    }
 
-	&_level {
-		width: 200px;
-		font-size: 30px;
-		font-weight: bold;
-		text-align: justify;
-		justify-content: center;
-		margin-left: 10%;
+    &_level {
+        width: 200px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: justify;
+        justify-content: center;
+        margin-left: 10%;
 
-		&_bar {
-			width: 150px;
-			min-height: 30px;
-			justify-content: end;
-		}
-	}
+        &_bar {
+            width: 150px;
+            min-height: 30px;
+            justify-content: end;
+        }
+    }
 }
 
-section{
-	&.graph{
-		width: 65%;
-		height: 50%;
-		min-height: 50vh;
-		margin: 0px auto;
-		background-color:#999999;
-	}
+section {
+    &.graph {
+        width: 65%;
+        height: 50%;
+        min-height: 50vh;
+        margin: 0px auto;
+    }
 
-	&.task_tab{
-		width: 65%;
-		height: 50%;
-		min-height: 40vh;
-		margin: 0px auto;
-		background-color:#999999;
-	}
+    &.task_tab {
+        width: 65%;
+        height: 50%;
+        min-height: 40vh;
+        margin: 0px auto;
+    }
 }
 
 div {
-	&.graph_area{
-		img{
-			height: 300px;
+    &.graph_area {
+        img {
+            height: 300px;
+        }
+    }
+    &.graph1 {
+        float: left;
+        width: 60%;
+        margin: 0px auto;
+        background-color: #ffcc00;
+    }
+    &.graph2 {
+        float: left;
+        width: 40%;
+        margin: 0px auto;
+        background-color: #0000ff;
+    }
+    &.incomplete_task_list {
+        width: 100%;
+        margin: 0px auto;
+        background-color: #ff00ff;
+    }
+    &.complete_task_list {
+        width: 100%;
+        margin: 0px auto;
+        background-color: #008080;
+    }
+}
+
+.task_list{
+	width: 65%;
+	height: 50%;
+	min-height: 40vh;
+	margin: 0px auto;
+
+	& .button_area {
+		display: flex;
+
+		& .done_not {
+			text-align: center;
+			width: 20%;
+			padding: 0.5em 1em;
+			border: 2px solid black;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		& .done {
+			text-align: center;
+			width: 20%;
+			padding: 0.5em 1em;
+			border: 2px solid black;
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
-	&.graph1{
-		float: left;
-		width: 60%;
-		margin: 0px auto;
-		background-color:#FFCC00;
-	}
-	&.graph2{
-		float: left;
-		width: 40%;
-		margin: 0px auto;
-		background-color:#0000FF;
-	}
-	&.incomplete_task_list{
+
+	& .not_done_task {
 		width: 100%;
-		margin: 0px auto;
-		background-color:#FF00FF;
+		height: 35vh;
+		border: 2px solid black;
+		overflow: auto;
+
+		& .task_info {
+			border: 2px solid blue;
+			margin: 2% 1%;
+
+			& .task_detail {
+				margin: 2%, 1%;
+
+				& p {
+					margin-left: 3%;
+					font-size: 16px;
+				}
+
+				& .comment {
+					border-bottom: 1px solid black;
+				}
+			}
+
+			& .second_info {
+				display: flex;
+				margin: 1% auto;
+
+				& .limit {
+					margin-left: 3%;
+				}
+
+				& .limit_date {
+					font-size: 16px;
+					font-weight: bold;
+				}
+
+				& button {
+					margin-left: auto;
+					margin-right: 5%;
+					background: salmon; /* 背景色 */
+					color: #fff; /* 文字色 */
+					padding: 5px 13px; /* 上下の余白、左右の余白 */
+					text-decoration: none; /* デフォルトで入るリンクの下線を消す */
+					border-radius: 30px; /* 角を丸くする */
+
+					&:hover {
+						cursor: pointer;
+						border: 1px solid #da3c41;
+						outline: none;
+						box-shadow: 1px 1px 0 0 rgba(218,60,65, .5);
+					}
+				}
+			}
+		}
 	}
-	&.complete_task_list{
+
+	& .done_task {
 		width: 100%;
-		margin: 0px auto;
-		background-color:#008080;
+		height: 35vh;
+		border: 2px solid black;
+		overflow: auto;
+		display: none;
+
+		& .task_info {
+			border: 2px solid blue;
+			margin: 2% 1%;
+
+			& .task_detail {
+				margin: 2%, 1%;
+
+				& p {
+					margin-left: 3%;
+					font-size: 16px;
+				}
+
+				& .comment {
+					border-bottom: 1px solid black;
+				}
+			}
+
+			& .second_info {
+				display: flex;
+				margin: 1% auto;
+
+				& .limit {
+					margin-left: 3%;
+				}
+
+				& .limit_date {
+					font-size: 16px;
+					font-weight: bold;
+				}
+
+				& button {
+					margin-left: auto;
+					margin-right: 5%;
+					background: salmon; /* 背景色 */
+					color: #fff; /* 文字色 */
+					padding: 5px 13px; /* 上下の余白、左右の余白 */
+					text-decoration: none; /* デフォルトで入るリンクの下線を消す */
+					border-radius: 30px; /* 角を丸くする */
+
+					&:hover {
+						cursor: pointer;
+						border: 1px solid #da3c41;
+						outline: none;
+						box-shadow: 1px 1px 0 0 rgba(218,60,65, .5);
+					}
+				}
+			}
+		}
 	}
 }
