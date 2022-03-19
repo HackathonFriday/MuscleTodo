@@ -16,11 +16,10 @@ class MypageController < ApplicationController
     @task_modal = Task.new
     # ここまで
 
-     # 未完了タスク一覧
-     cookie[:token] = 'testtest'
-    @incompolete_task_list = Task.where(Task.where(token: cookie[token])).to_a
-    # 完了タスク一覧
-    @compolete_task_list = Task.where(Task.where(token: cookie[token])).to_a
+    cookies[:token] = 'testtest'
+    task_list = Task.eager_load(:category, :user).where(token: cookies[token])
+    @no_complete_task_list = task_list.where(is_done: false);
+    @complete_task_list = task_list.where(is_done: true);
   end
 
   def create
