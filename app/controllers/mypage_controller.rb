@@ -48,6 +48,11 @@ class MypageController < ApplicationController
     # TODO: 経験値加算処理追加
   end
 
+  def update
+    task = Task.find(params[:id])
+    task.update(is_done: true)
+  end
+
   private
     def task_params
       byebug
