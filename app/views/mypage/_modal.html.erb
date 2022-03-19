@@ -2,23 +2,21 @@
     <div class="background">
         <div class="contents">
             <p class="title">
-                テストタイトル
-                <span>テストタイトル</span>
+                <%= @modal_data['is_creation_flg'] ? 'これから勉強を頑張る' : '勉強を頑張った'%>
+                あなたへ
+                <br>
+                <span>マッチョからの応援メッセージ 💙</span>
             </p>
             <div class="mainarea">
                 <div class="textarea">
-                    <span>
-                        <%= @modal_data['phrase'] %>
-                    </span>
+                <div class="balloon">
+                    <div class="says"><p><%= @modal_data['phrase'] %></p></div>
+                </div>
                 </div>
                 <div class="mainimg">
                     <%= image_tag @modal_data['path'] %>
-                    <span>
-                        ここに画像がくる感じ
-                    </span>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
