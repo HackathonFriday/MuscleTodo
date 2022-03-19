@@ -15,5 +15,12 @@ class MypageController < ApplicationController
     # タスク作成追加画面（モーダル表示）用の変数
     @task_modal = Task.new
     # ここまで
+
+    # ユーザー取得
+    token = cookies[:token]
+    @user = User.find_by(token: token)
+
+    # タスク完了前の経験値
+    @old_exp = 80
   end
 end
