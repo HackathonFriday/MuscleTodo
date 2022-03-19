@@ -1,11 +1,13 @@
-import displayChart from '@js/display_chart';
+import displayChart from '@js/_share/display_chart';
 
-const userId = document.querySelector('.user_id') ?? 3;
-window.addEventListener('DOMContentLoaded', () =>
-    new displayChart(userId).run()
-);
+window.addEventListener('DOMContentLoaded', () => {
+    const userId = document.querySelector('.user_id') ?? 3;
+    new displayChart(userId).run();
 
-// const animateExpBar = () => {
 
-// }
-// animateExpBar();
+    // const animateExpBar = () => {
+    
+    // }
+    // animateExpBar();
+});
+
