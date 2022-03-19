@@ -51,7 +51,6 @@ class MypageController < ApplicationController
 
   private
     def task_params
-      byebug
       params.permit(:title, :note, :category_id, :expire_date)
     end
 end
