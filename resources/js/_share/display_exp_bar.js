@@ -14,12 +14,17 @@ export default class displayExpBar {
 
     run() {
         const bar = new this.ProgressBar.Line(this.expContainer, {
-            strokeWidth: 10,
-            easing: 'easeInOut',
+            strokeWidth: 4,
+            easing: 'linear',
             duration: this.animationDuration,
-            color: 'limegreen',
+            color: '#f4eab7',
             trailColor: '#eee',
             svgStyle: { width: '100%', height: '100%' },
+            from: { color: '#f4eab7' },
+            to: { color: '#0acf0a' },
+            step: (state, bar) => {
+                bar.path.setAttribute('stroke', state.color);
+            },
         });
 
         // 経験値更新前の値を初期値にセット
