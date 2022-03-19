@@ -24,12 +24,15 @@ header {
     display: flex;
     flex-wrap: wrap;
     min-height: 100%;
-    padding: 1px 0 22px 0;
+    padding: 10px 0 22px 0;
     margin: 0 auto;
 
     &_logo {
         margin-right: 15px;
-        width: 120px;
+        img {
+            width: 50px;
+            height: 50px;
+        }
     }
 }
 
@@ -37,7 +40,6 @@ header {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 990px;
     margin: 0 auto;
 
     &_name {
@@ -52,7 +54,6 @@ header {
         font-weight: bold;
         text-align: justify;
         justify-content: center;
-        margin-left: 10%;
 
         &_bar {
             width: 150px;
