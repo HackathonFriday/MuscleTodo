@@ -1,7 +1,4 @@
-<h1>Mypage#show</h1>
-<p>Find me in app/views/mypage/show.html.erb</p>
-
-<body class="my_page" width="1000" margin="100 100">
+<%# <body class="my_page" width="1000" margin="100 100"> %>
 	<header class="header">
 		ここにヘッダー
 	</header>
@@ -25,29 +22,6 @@
 			</div>
 		</section>
 	</div>
-    <a href="" class="switch">モーダルスイッチ</a>
-</body>
 
-<div class="modal">
-        <div class="background">
-            <div class="contents">
-                <p class="title">
-                    テストタイトル
-                    <span>テストタイトル</span>
-                </p>
-                <div class="mainarea">
-                    <div class="textarea">
-                        <span>
-                            ここに文字とかくる感じ
-                        </span>
-                    </div>
-                    <div class="mainimg">
-                        <span>
-                            ここに画像がくる感じ
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <%= render partial: 'modal', character: @character %>
+<%# </body> %>
