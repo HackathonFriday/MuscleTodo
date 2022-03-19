@@ -16,7 +16,14 @@ class MypageController < ApplicationController
     @task_modal = Task.new
     # ここまで
 
-    cookies[:token] = 'testtest'
+    # ユーザー取得
+    token = cookies[:token]
+    @user = User.find_by(token: token)
+
+    # タスク完了前の経験値
+    @old_exp = 80
+
+    # タスク一覧の取得
     task_list = Task.eager_load(:category, :user).where(token: cookies[token])
     @no_complete_task_list = task_list.where(is_done: false);
     @complete_task_list = task_list.where(is_done: true);
