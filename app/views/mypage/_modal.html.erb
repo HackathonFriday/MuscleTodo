@@ -2,8 +2,10 @@
     <div class="background">
         <div class="contents">
             <p class="title">
-                マッチョから
-                <span>あなたへの応援メッセージ 💙</span>
+                <%= @modal_data['is_creation_flg'] ? 'これから勉強を頑張る' : '勉強を頑張った'%>
+                あなたへ
+                <br>
+                <span>マッチョからの応援メッセージ 💙</span>
             </p>
             <div class="mainarea">
                 <div class="textarea">
