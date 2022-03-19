@@ -27,6 +27,6 @@ class HomeController < ApplicationController
 
 	private
 		def user_params
-			params.require(:user).permit(:name, :gender, :token)
+			params.require(:user).permit(:name, :gender)
 		end
 end
