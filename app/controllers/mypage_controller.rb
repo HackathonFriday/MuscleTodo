@@ -49,6 +49,12 @@ class MypageController < ApplicationController
     # TODO: 経験値加算処理追加
   end
 
+  def update
+    task = Task.find(params[:id])
+    task.update(is_done: true)
+    redirect_to mypage_show_path
+  end
+
   private
     def task_params
       params.permit(:title, :note, :category_id, :expire_date)

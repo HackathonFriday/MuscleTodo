@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'mypage/show'
   post'mypage/show', to: 'mypage#create'
+  patch 'mypage/show', to: 'mypage#update'
+  put 'mypage/show', to: 'mypage#update'
 
   root 'home#index'
   post 'home/index', to: 'home#create'

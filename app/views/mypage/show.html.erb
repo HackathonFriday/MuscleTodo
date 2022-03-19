@@ -38,6 +38,7 @@
 					</div>
 					<div class="second_info">
 						<p class="limit">期日：</p><p class="limit_date"><%= n[:expire_date]%></p>
+						<%= button_to '完了', {controller: 'mypage', action: 'update'}, {method: :put, params: { id: n[:id] } } %>
 						<button>完了にする</button>
 					</div>
 				</div>
