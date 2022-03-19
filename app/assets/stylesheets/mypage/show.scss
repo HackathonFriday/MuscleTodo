@@ -3,108 +3,109 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import './_modal.scss';
+@import './_api.scss';
 @import './_task_modal.scss';
 
-body{
-	margin: 0;
+body {
+    margin: 0;
 }
 
-div.body{
-	margin: auto;
+div.body {
+    margin: auto;
 }
 
 header {
-	width: 65%;
-	height: 90px;
-	margin: 0px auto;
+    width: 65%;
+    height: 90px;
+    margin: 0px auto;
 }
 
 .header {
-	display: flex;
-	flex-wrap: wrap;
-	min-height: 100%;
-	padding: 1px 0 22px 0;
-	margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100%;
+    padding: 1px 0 22px 0;
+    margin: 0 auto;
 
-	&_logo {
-		margin-right: 15px;
-		width: 120px;
-	}
+    &_logo {
+        margin-right: 15px;
+        width: 120px;
+    }
 }
 
 .user {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	width: 990px;
-	margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 990px;
+    margin: 0 auto;
 
-	&_name {
-		width: 300px;
-		font-size: 1.8em;
-		padding: 5px 10px;
-	}
+    &_name {
+        width: 300px;
+        font-size: 1.8em;
+        padding: 5px 10px;
+    }
 
-	&_level {
-		width: 200px;
-		font-size: 30px;
-		font-weight: bold;
-		text-align: justify;
-		justify-content: center;
-		margin-left: 10%;
+    &_level {
+        width: 200px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: justify;
+        justify-content: center;
+        margin-left: 10%;
 
-		&_bar {
-			width: 150px;
-			min-height: 30px;
-			justify-content: end;
-		}
-	}
+        &_bar {
+            width: 150px;
+            min-height: 30px;
+            justify-content: end;
+        }
+    }
 }
 
-section{
-	&.graph{
-		width: 65%;
-		height: 50%;
-		min-height: 50vh;
-		margin: 0px auto;
-		background-color:#999999;
-	}
+section {
+    &.graph {
+        width: 65%;
+        height: 50%;
+        min-height: 50vh;
+        margin: 0px auto;
+        background-color: #999999;
+    }
 
-	&.task_tab{
-		width: 65%;
-		height: 50%;
-		min-height: 40vh;
-		margin: 0px auto;
-		background-color:#999999;
-	}
+    &.task_tab {
+        width: 65%;
+        height: 50%;
+        min-height: 40vh;
+        margin: 0px auto;
+        background-color: #999999;
+    }
 }
 
 div {
-	&.graph_area{
-		img{
-			height: 300px;
-		}
-	}
-	&.graph1{
-		float: left;
-		width: 60%;
-		margin: 0px auto;
-		background-color:#FFCC00;
-	}
-	&.graph2{
-		float: left;
-		width: 40%;
-		margin: 0px auto;
-		background-color:#0000FF;
-	}
-	&.incomplete_task_list{
-		width: 100%;
-		margin: 0px auto;
-		background-color:#FF00FF;
-	}
-	&.complete_task_list{
-		width: 100%;
-		margin: 0px auto;
-		background-color:#008080;
-	}
+    &.graph_area {
+        img {
+            height: 300px;
+        }
+    }
+    &.graph1 {
+        float: left;
+        width: 60%;
+        margin: 0px auto;
+        background-color: #ffcc00;
+    }
+    &.graph2 {
+        float: left;
+        width: 40%;
+        margin: 0px auto;
+        background-color: #0000ff;
+    }
+    &.incomplete_task_list {
+        width: 100%;
+        margin: 0px auto;
+        background-color: #ff00ff;
+    }
+    &.complete_task_list {
+        width: 100%;
+        margin: 0px auto;
+        background-color: #008080;
+    }
 }
