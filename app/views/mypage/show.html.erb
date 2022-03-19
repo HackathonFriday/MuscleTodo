@@ -25,6 +25,7 @@
 				<div class="done">
 					完了済
 				</div>
+				<button class="create_task">タスク作成</button>
 			</div>
 			<div class="not_done_task">
 				<div class="task_info">
@@ -136,8 +137,11 @@
 				</div>
 			</div>
 		</div>
+		<div class="footer">
+		</div>
 	</section>
 </div>
 
 <%= render partial: 'macho_modal', macho_modal: @macho_modal %>
 <%= render partial: 'task_modal', task_modal: @task_modal %>
+<%= render partial: 'category_modal', task_modal: @category_modal %>

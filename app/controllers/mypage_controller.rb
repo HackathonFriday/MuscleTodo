@@ -16,6 +16,8 @@ class MypageController < ApplicationController
     @task_modal = Task.new
     # ここまで
 
+    #カテゴリーモーダル用
+    @category_modal = Category.new
     # ユーザー取得
     token = cookies[:token]
     @user = User.find_by(token: token)
