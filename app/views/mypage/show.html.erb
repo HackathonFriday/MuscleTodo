@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "mypage/show", :media => "all" %>
 <header>
 	<div class="header">
 		<div class="header_logo">
@@ -23,4 +24,5 @@
 	</section>
 </div>
 
-<%= render partial: 'modal', modal_data: @modal_data %>
+<%= render partial: 'macho_modal', macho_modal: @macho_modal %>
+<%= render partial: 'task_modal', task_modal: @task_modal %>
