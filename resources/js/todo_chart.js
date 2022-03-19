@@ -1,6 +1,3 @@
-// scssファイルをバンドル
-import '@scss/todo_chart.scss';
-
 class displayChart {
     constructor() {
         // @TODO 動的に変える
@@ -34,16 +31,15 @@ class displayChart {
         const countPerIsDone = { done: {}, notDone: {} };
 
         tasks.forEach((task, i) => {
-            // taskのカテゴリ名が設定されている時
+            // taskのカテゴリが未定義の場合
             if (countPerIsDone.done[task.category_name] === undefined) {
                 // 条件がfalseでも、定義（初期化）のため0を入れる
                 countPerIsDone.done[task.category_name] = task.is_done ? 1 : 0;
                 countPerIsDone.notDone[task.category_name] = task.is_done
                     ? 0
                     : 1;
-                // taskのカテゴリが未定義の時
+                // taskのカテゴリ名が設定されている時
             } else {
-                // 条件がfalseでも、定義（初期化）のため0を入れる
                 task.is_done
                     ? countPerIsDone.done[task.category_name]++
                     : countPerIsDone.notDone[task.category_name]++;
