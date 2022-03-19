@@ -25,6 +25,7 @@
 				<div class="done">
 					完了済
 				</div>
+				<button class="create_task">タスク作成</button>
 			</div>
 			<div class="not_done_task">
 				<% @no_complete_task_list.each do |n| %>
@@ -57,8 +58,8 @@
 				<% end %>
 			</div>
 		</div>
-		<button class="create_task">タスク追加</button>
 	</section>
 </div>
 <%= render partial: 'macho_modal', macho_modal: @macho_modal %>
-<%= render partial: 'task_modal', task_modal: @task_modal, user_id: @user_id %>
+<%= render partial: 'task_modal', task_modal: @task_modal %>
+<%= render partial: 'category_modal', task_modal: @category_modal %>

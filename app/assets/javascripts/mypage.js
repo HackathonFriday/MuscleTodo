@@ -10,9 +10,26 @@ $(function () {
         return false;
     })
 
-    $('.contents').on('click', function(event){
+    $('.category_background').on('click', function(){
+        $('.category_modal').css('display', 'none');
+    })
+
+    $('.macho_contents').on('click', function(event){
         event.stopPropagation();
     })
+
+    $('.task_contents').on('click', function(event){
+        event.stopPropagation();
+    })
+
+    $('.category_contents').on('click', function(event){
+        event.stopPropagation();
+    })
+
+    $('.input_submit').on('click', function(event){
+        event.stopPropagation();
+    })
+
 
     $('.task_contents').on('click', function(event){
         event.stopPropagation();
@@ -26,8 +43,14 @@ $(function () {
         $('.not_done_task').show();
         $('.done_task').hide();
     });
+
     $('.done').on('click', function(){
         $('.done_task').show();
         $('.not_done_task').hide();
     });
+
+    $('.create_category').on('click', function(){
+        $('.category_modal').show();
+        return false;
+    })
 })

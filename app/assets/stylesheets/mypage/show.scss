@@ -5,6 +5,7 @@
 @import './_modal.scss';
 @import './_api.scss';
 @import './_task_modal.scss';
+@import './_category_modal.scss';
 
 body {
     margin: 0;
@@ -137,6 +138,23 @@ div {
 
 			&:hover {
 				cursor: pointer;
+			}
+		}
+
+		& .create_task {
+			margin-left: auto;
+			margin-bottom: 0.5em;
+			background: rgb(25, 38, 214);
+			color: #fff;
+			padding: 12px 42px;
+			text-decoration: none;
+			border-radius: 30px;
+			justify-content: flex-end;
+			&:hover {
+				cursor: pointer;
+				border: 1px solid #da3c41;
+				outline: none;
+				box-shadow: 1px 1px 0 0 rgba(218,60,65, .5);
 			}
 		}
 	}

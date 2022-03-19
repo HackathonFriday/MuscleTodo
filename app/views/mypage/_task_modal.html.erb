@@ -12,7 +12,10 @@
                         <%= f.text_field :title, class:'input_form' %>
                     </div>
                     <div class="input_parts">
-                        <%= f.label :category_id, 'カテゴリ', class:'input_label' %>
+                        <div class="category_label">
+                            <%= f.label :category_id, 'カテゴリ', class:'input_label' %>
+                            <a href="" class="create_category">カテゴリ追加</a>
+                        </div>
                         <div class="category">
                             <%= f.select :category_id, [['HTML', 1], ['CSS', 2], ['Ruby', 3]], {}, class:'input_select' %>
                         </div>
@@ -25,7 +28,6 @@
                         <%= f.label :expire_date, '期日', class:'input_label' %>
                         <div class="submit_area">
                             <%= f.date_field :expire_date, class:'input_limit' %>
-                            <%= f.hidden_field :user_id, :value => @user_id %>
                             <%= f.submit '送信する', class:'input_submit' %>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'categories/create'
+  post 'categories/create'
 
   get 'api/fetch_task'
 
