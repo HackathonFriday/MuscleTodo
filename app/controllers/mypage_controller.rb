@@ -51,6 +51,7 @@ class MypageController < ApplicationController
   def update
     task = Task.find(params[:id])
     task.update(is_done: true)
+    redirect_to mypage_show_path
   end
 
   private
