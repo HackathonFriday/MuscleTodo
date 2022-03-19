@@ -15,5 +15,8 @@ class MypageController < ApplicationController
     # タスク作成追加画面（モーダル表示）用の変数
     @task_modal = Task.new
     # ここまで
+
+    #カテゴリーモーダル用
+    @category_modal = Category.new
   end
 end

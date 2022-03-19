@@ -1,0 +1,22 @@
+<div class="category_modal">
+    <div class="background">
+        <div class="category_contents">
+            <p class="title">
+                カテゴリー登録
+            </p>
+            <div class="input">
+                <div class="input_area">
+                    <%= form_with model:@tasks_modal, url:mypage_show_path(@tasks_modal), local: true do |f| %>
+                        <div class="input_parts">
+                            <%= f.label :name, 'カテゴリ名', class:'input_label' %>
+                            <%= f.text_field :name, class:'input_form' %>
+                        </div>
+                        <div class="submit_area">
+                            <%= f.submit '登録する', class:'input_submit' %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
