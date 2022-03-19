@@ -76,7 +76,9 @@ export default class displayChart {
                 {
                     label: '完了',
                     data: Object.values(countPerIsDone.done),
-                    backgroundColor: this.getColorList(),
+                    backgroundColor: this.getColorList(
+                        Object.keys(countPerIsDone.done).length
+                    ),
                     borderWidth: 0,
                 },
                 {
@@ -153,15 +155,15 @@ export default class displayChart {
         // ドーナツグラフ
         const type = 'doughnut';
 
-        const backgroundColor = this.getColorList();
-
         const data = {
             labels: Object.keys(countPerCategory),
             datasets: [
                 {
                     data: Object.values(countPerCategory),
                     // dataごとの背景色
-                    backgroundColor,
+                    backgroundColor: this.getColorList(
+                        Object.keys(countPerCategory).length
+                    ),
                 },
             ],
         };
@@ -180,12 +182,13 @@ export default class displayChart {
     }
 
     /**
-     * グラフに表示する色を優先順位順にまとめて管理
+     * グラフに表示する色を優先順位順にまとめて管理し、countの数だけ先頭からreturn
      *
+     * @param {number} count グラフが必要とする色の数
      * @returns {array}
      */
-    getColorList() {
-        return [
+    getColorList(count) {
+        const colorsArray = [
             'tomato',
             'limegreen',
             'steelblue',
@@ -205,5 +208,7 @@ export default class displayChart {
             'paleturquoise',
             'peachpuff',
         ];
+
+        return colorsArray.slice(0, count);
     }
 }
