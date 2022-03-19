@@ -1,10 +1,11 @@
-.modal {
+.macho_modal {
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     z-index: 1;
+    display: none;
 }
 
 .background {
@@ -14,6 +15,7 @@
     width: 100%;
     height: 100%;
     background: rgba(36, 36, 36, 0.7);
+    z-index: -1;
 }
 
 .contents {
@@ -26,6 +28,7 @@
     padding: 50px 20px 60px;
     border-radius: 10px;
     background: #fff;
+    z-index: 3;
 }
 
 .title {
@@ -34,7 +37,7 @@
     margin-bottom: 30px;
     font-size: 24px;
     text-align: center;
-    border-bottom: 3px dotted #e8e8e8;
+    border-bottom: 3px dotted rgb(25, 74, 209);
 }
 
 .title span {
@@ -82,21 +85,13 @@
     padding-right: 27px;
     padding-left: 27px;
 }
+
 .balloon {
     justify-content: flex-end;
     margin-top: 15%;
     margin-left: 20%;
 }
-.faceicon img {
-    width: 80px; /*任意のサイズ*/
-    height: auto;
-}
-.balloon .faceicon {
-    margin-left: 25px;
-}
-.balloon .faceicon {
-    order: 2 !important;
-}
+
 .says {
     max-width: 500px; /*最大幅は任意*/
     display: flex;
@@ -110,22 +105,26 @@
     line-height: 1.5;
     /*   align-items: center; */
 }
+
 .says p {
     margin: 8px 0 0 !important;
     font-size: 25px;
     font-weight: bold;
 }
+
 .says p:first-child {
     margin-top: 0 !important;
     font-size: 25px;
     font-weight: bold;
 }
+
 .says:after {
     content: "";
     position: absolute;
     border: 10px solid transparent;
     /*   margin-top:-3px;  */
 }
+
 .balloon .says:after {
     right: -26px;
     border-left: 22px solid #99dddd;

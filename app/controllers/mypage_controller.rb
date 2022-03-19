@@ -1,6 +1,6 @@
 class MypageController < ApplicationController
   def show
-
+    # マッチョモーダル用の変数取得
     is_creation_flg = false; # テスト用にタスク作成時と完了時のフラグをここで設定
 
     characters = Character.pluck(:image_path)
@@ -9,9 +9,14 @@ class MypageController < ApplicationController
     character = characters.sample
     phrase = phrases.sample
 
-    @modal_data = {'path' => character, 'phrase' => phrase, 'is_creation_flg' => is_creation_flg}
+    @macho_modal = {'path' => character, 'phrase' => phrase, 'is_creation_flg' => is_creation_flg}
+    # ここまで
 
-    # 未完了タスク一覧
+    # タスク作成追加画面（モーダル表示）用の変数
+    @task_modal = Task.new
+    # ここまで
+
+     # 未完了タスク一覧
     @incompolete_task_list = Task.where(Task.where(id: params[:id])).or(is_done: false)
     # 完了タスク一覧
     @compolete_task_list = Task.where(Task.where(id: params[:id])).or(is_done: true)

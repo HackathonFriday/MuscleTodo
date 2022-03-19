@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "mypage/show", :media => "all" %>
 <header>
 	<div class="header">
 		<div class="header_logo">
@@ -19,7 +20,9 @@
 			<div class="incomplete_task_list">ここに未完了タスクリスト</div>
 			<div class="complete_task_list">ここに完了タスクリスト</div>
 		</div>
+		<button class="create_task">タスク追加</button>
 	</section>
 </div>
 
-<%= render partial: 'modal', modal_data: @modal_data %>
+<%= render partial: 'macho_modal', macho_modal: @macho_modal %>
+<%= render partial: 'task_modal', task_modal: @task_modal %>
