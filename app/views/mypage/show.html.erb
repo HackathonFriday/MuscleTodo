@@ -3,16 +3,7 @@
 </header>
 <div class="body">
 	<section class="graph">
-		<div class="graph_area">
-			<div class="graph1">
-				ここに棒?グラフ<br>
-				<%= image_tag "sample_bar_graph" %>
-			</div>
-			<div class="graph2">
-				ここに円?グラフ<br>
-				<%= image_tag "sample_circle_graph" %>
-			</div>
-		</div>
+		<%= render partial: 'chart' %>
 	</section>
 	<section class="task_tab">
 		<div class="task_list">
