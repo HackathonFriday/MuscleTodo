@@ -38,15 +38,19 @@ class MypageController < ApplicationController
   end
 
   def create
-    byebug
+    token = cookies[:token]
+    @user = User.find_by(token: token)
     @task = Task.create(task_params)
-    redirect_to mypage_show_path
+    @task.user_id = @user.id;
+    if @task.save
+      redirect_to mypage_show_path
+    end
     # TODO: 経験値加算処理追加
   end
 
   private
     def task_params
       byebug
-      params.permit(:title, :note, :category_id,)
+      params.permit(:title, :note, :category_id, :expire_date)
     end
 end
