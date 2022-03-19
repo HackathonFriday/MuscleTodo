@@ -11,6 +11,9 @@ $(function () {
 
     $('.contents').on('click', function(event){
         event.stopPropagation();
-        return false;
+    })
+
+    $('.task_contents').on('click', function(event){
+        event.stopPropagation();
     })
 })
