@@ -34,7 +34,8 @@ class MypageController < ApplicationController
     task_list = Task.eager_load(:category, :user).where(user_id: @user.id)
     @no_complete_task_list = task_list.where(is_done: false).to_a;
     @complete_task_list = task_list.where(is_done: true).to_a;
-    byebug
+
+    @categories = Category.where('user_id IS NULL OR user_id = ?', @user.id)
   end
 
   def create
@@ -56,7 +57,6 @@ class MypageController < ApplicationController
 
   private
     def task_params
-      byebug
       params.permit(:title, :note, :category_id, :expire_date)
     end
 end
