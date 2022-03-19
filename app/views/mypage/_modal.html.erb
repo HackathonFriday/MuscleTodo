@@ -8,11 +8,11 @@
             <div class="mainarea">
                 <div class="textarea">
                     <span>
-                        ここに文字とかくる感じ
+                        <%= @modal_data['phrase'] %>
                     </span>
                 </div>
                 <div class="mainimg">
-                    <%= image_tag @character.image_path %>
+                    <%= image_tag @modal_data['path'] %>
                     <span>
                         ここに画像がくる感じ
                     </span>
