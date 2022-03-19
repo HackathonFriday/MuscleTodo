@@ -27,111 +27,30 @@
 				</div>
 			</div>
 			<div class="not_done_task">
+				<%= @no_complete_task_list.each do |n| %>
 				<div class="task_info">
 					<div class="task_detail">
-						<p>未完了のタスク名 | カテゴリ</p>
+						<p><%= n[:title]%> | <%= n[:category_id]%></p>
 						<div class="comment">
 							<p>内容：</p>
-							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
+							<p><%= n[:note]%></p>
 						</div>
 					</div>
 					<div class="second_info">
-						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
+						<p class="limit">期日：</p><p class="limit_date"><%= n[:expire_date]%></p>
 						<button>完了にする</button>
 					</div>
 				</div>
-				<div class="task_info">
-					<div class="task_detail">
-						<p>タスク名 | カテゴリ</p>
-						<div class="comment">
-							<p>内容：</p>
-							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
-						</div>
-					</div>
-					<div class="second_info">
-						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
-						<button>完了にする</button>
-					</div>
-				</div>
-				<div class="task_info">
-					<div class="task_detail">
-						<p>タスク名 | カテゴリ</p>
-						<div class="comment">
-							<p>内容：</p>
-							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
-						</div>
-					</div>
-					<div class="second_info">
-						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
-						<button>完了にする</button>
-					</div>
-				</div>
-				<div class="task_info">
-					<div class="task_detail">
-						<p>タスク名 | カテゴリ</p>
-						<div class="comment">
-							<p>内容：</p>
-							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
-						</div>
-					</div>
-					<div class="second_info">
-						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
-						<button>完了にする</button>
-					</div>
-				</div>
-			</div>
 
 			<div class="done_task">
+				<%= @complete_task_list.each do |c| %>
 				<div class="task_info">
 					<div class="task_detail">
-						<p>完了済みのタスク名 | カテゴリ</p>
+						<p><%= c[:title]%> | <%= c[:category_id]%></p>
 						<div class="comment">
 							<p>内容：</p>
-							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
+							<p><%= c[:note]%></p>
 						</div>
-					</div>
-					<div class="second_info">
-						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
-						<button>完了にする</button>
-					</div>
-				</div>
-				<div class="task_info">
-					<div class="task_detail">
-						<p>タスク名 | カテゴリ</p>
-						<div class="comment">
-							<p>内容：</p>
-							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
-						</div>
-					</div>
-					<div class="second_info">
-						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
-						<button>完了にする</button>
-					</div>
-				</div>
-				<div class="task_info">
-					<div class="task_detail">
-						<p>タスク名 | カテゴリ</p>
-						<div class="comment">
-							<p>内容：</p>
-							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
-						</div>
-					</div>
-					<div class="second_info">
-						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
-						<button>完了にする</button>
-					</div>
-				</div>
-				<div class="task_info">
-					<div class="task_detail">
-						<p>タスク名 | カテゴリ</p>
-						<div class="comment">
-							<p>内容：</p>
-							<p>テストテストテストテストテストテストテストテストテストテストテスト</p>
-						</div>
-					</div>
-					<div class="second_info">
-						<p class="limit">期日：</p><p class="limit_date">2022年3月13日</p>
-						<button>完了にする</button>
 					</div>
 				</div>
 			</div>
