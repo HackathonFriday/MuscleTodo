@@ -1,11 +1,14 @@
+// scssファイルをバンドル
+import '@scss/todo_chart.scss';
+
 class displayChart {
     constructor() {
         // @TODO 動的に変える
         this.userId = 3;
 
         this.Chart = require('chart.js');
-        this.doughnutChartCanvas = document.querySelector('#js-doughnutChart');
         this.barChartCanvas = document.querySelector('#js-barChart');
+        this.doughnutChartCanvas = document.querySelector('#js-doughnutChart');
     }
 
     async run() {
