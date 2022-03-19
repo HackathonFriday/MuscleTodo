@@ -21,4 +21,13 @@ $(function () {
     $('.create_task').on('click', function(){
         $('.task_modal').toggle();
     })
+
+    $('.done_not').on('click', function(){
+        $('.not_done_task').show();
+        $('.done_task').hide();
+    });
+    $('.done').on('click', function(){
+        $('.done_task').show();
+        $('.not_done_task').hide();
+    });
 })
