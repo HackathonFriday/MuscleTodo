@@ -29,5 +29,24 @@ class MypageController < ApplicationController
 
     # タスク完了前の経験値
     @old_exp = 80
+
+    # タスク一覧の取得
+    task_list = Task.eager_load(:category, :user).where(user_id: @user.id)
+    @no_complete_task_list = task_list.where(is_done: false).to_a;
+    @complete_task_list = task_list.where(is_done: true).to_a;
+    byebug
   end
+
+  def create
+    byebug
+    @task = Task.create(task_params)
+    redirect_to mypage_show_path
+    # TODO: 経験値加算処理追加
+  end
+
+  private
+    def task_params
+      byebug
+      params.permit(:title, :note, :category_id,)
+    end
 end
