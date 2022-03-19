@@ -1,4 +1,4 @@
-<body class="my_page" width="1000" margin="100 100">
+<%# <body class="my_page" width="1000" margin="100 100"> %>
 	<header class="header">
 		ここにヘッダー
 	</header>
@@ -22,4 +22,6 @@
 			</div>
 		</section>
 	</div>
-</body>
+
+    <%= render partial: 'modal', modal_data: @modal_data %>
+<%# </body> %>
