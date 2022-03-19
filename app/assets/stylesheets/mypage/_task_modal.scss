@@ -5,7 +5,6 @@
     top: 0;
     left: 0;
     z-index: 1;
-    display: none;
 }
 
 .task_contents {
@@ -137,4 +136,14 @@
     display: flex;
     padding-right: 15%;
     justify-content: space-between;
+}
+
+.category_label {
+    position: relative;
+
+    & .create_category {
+        position: absolute;
+        bottom: 0;
+        right: 20%;
+    }
 }
