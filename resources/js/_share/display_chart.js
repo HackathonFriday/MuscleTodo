@@ -190,7 +190,7 @@ export default class displayChart {
     getColorList(count) {
         const colorsArray = [
             'tomato',
-            'limegreen',
+            'mediumseagreen',
             'steelblue',
             'darkorchid',
             'teal',

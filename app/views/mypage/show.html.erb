@@ -6,7 +6,7 @@
 		</div>
 		<div class="user">
 			<div class="user_name"><%= @user.name %></div>
-			<div class="user_level">Lv.<%= @user.exp / 100 + 1 %></div>
+			<div class="user_level">Lv.<span class="js-user_level"><%= @user.exp / 100 + 1 %></span></div>
 			<div id="exp_container" data-current-exp="<%= @user.exp %>" data-old-exp="<%= @old_exp %>"></div>
 		</div>
 	</div>
