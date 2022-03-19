@@ -17,7 +17,7 @@
                             <a href="" class="create_category">カテゴリ追加</a>
                         </div>
                         <div class="category">
-                            <%= f.select :category_id, [['HTML', 1], ['CSS', 2], ['Ruby', 3]], {}, class:'input_select' %>
+                            <%= f.collection_select(:category_id, @categories, :id, :name, {}, {class:'input_select'}) %>
                         </div>
                     </div>
                     <div class="input_parts">
