@@ -2,7 +2,7 @@
     <div class="background">
         <div class="contents">
             <p class="title">
-                <%= @modal_data['is_creation_flg'] ? 'これから勉強を頑張る' : '勉強を頑張った'%>
+                <%= @macho_modal['is_creation_flg'] ? 'これから勉強を頑張る' : '勉強を頑張った'%>
                 あなたへ
                 <br>
                 <span>マッチョからの応援メッセージ 💙</span>
@@ -10,11 +10,11 @@
             <div class="mainarea">
                 <div class="textarea">
                 <div class="balloon">
-                    <div class="says"><p><%= @modal_data['phrase'] %></p></div>
+                    <div class="says"><p><%= @macho_modal['phrase'] %></p></div>
                 </div>
                 </div>
                 <div class="mainimg">
-                    <%= image_tag @modal_data['path'] %>
+                    <%= image_tag @macho_modal['path'] %>
                 </div>
             </div>
         </div>

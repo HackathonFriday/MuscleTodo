@@ -9,6 +9,6 @@ class MypageController < ApplicationController
     character = characters.sample
     phrase = phrases.sample
 
-    @modal_data = {'path' => character, 'phrase' => phrase, 'is_creation_flg' => is_creation_flg}
+    @macho_modal = {'path' => character, 'phrase' => phrase, 'is_creation_flg' => is_creation_flg}
   end
 end
