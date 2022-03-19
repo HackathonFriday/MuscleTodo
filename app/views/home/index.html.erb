@@ -1,2 +1,27 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div id="root">
+	<div class="box">
+		<div class="welcome_word">
+			<h2>ようこそ、マッスルToDoへ！</h2>
+		</div>
+		<div class="field">
+			<div class="user_info">
+				<%= form_for(@user, url: home_index_path(@user)) do |f| %>
+					<div class="name">
+						<div><%= f.label :name, "ユーザー名"%></div>
+						<div><%= f.text_field :name, placeholder: "ユーザー名" %></div>
+					</div>
+					<div class="gender">
+						<div><%= f.label :gender, "性別" %></div>
+						<div class="radio_button">
+							<label class="gender_button"><%= f.radio_button :gender, 1, checked: true %>男性</label>
+							<label class="gender_button"><%= f.radio_button :gender, 2 %>女性</label>
+							<label class="gender_button"><%= f.radio_button :gender, 3 %>その他</label>
+						</div>
+					</div>
+					<%= f.hidden_field :token, :value => "hogehoge" %></div>
+					<div class="register"><%= f.submit "登録する" %></div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
