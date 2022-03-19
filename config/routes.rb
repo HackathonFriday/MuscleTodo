@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'categories/create'
+
   get 'api/fetch_task'
 
   get 'mypage/show'
