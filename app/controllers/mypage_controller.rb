@@ -9,7 +9,7 @@ class MypageController < ApplicationController
     end
 
     # マッチョモーダル用の変数取得
-    is_creation_flg = params[:is_creation_flg]
+    is_creation_flg = false
 
     characters = Character.pluck(:image_path)
     phrases = Phrase.where(is_creation: is_creation_flg).pluck(:content)
