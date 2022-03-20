@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create([
-    { name: '出藻 戻夫', gender: 1, token: 'z9sAhRvH'},
+    { name: '出藻 戻夫', gender: 1, token: 'z9sAhRvH', exp: 480},
     { name: 'かーしー', gender: 1, token: 'uEnKRSX5'},
     { name: 'しょーき', gender: 1, token: 'ksTXZ9WM'},
     { name: 'りょーた', gender: 1, token: 'akfd9RvH'},
@@ -47,8 +47,8 @@ Task.create([
     { title: 'scss復習', note: 'できるところまで', category_id: 2, user_id: 2 },
     { title: '継承とは', note: '単一継承制約', category_id: 4, user_id: 1 },
     { title: 'AI', note: '機械学習初挑戦', category_id: 6, user_id: 1 },
-    { title: 'truncate tableについて', note: 'drop tableと何が違うの？', category_id: 7, user_id: 1 },
-    { title: 'indexを張る', note: '主キーにはデフォルトで張られているらしい（mysqlの場合）', category_id: 7, user_id: 1 },
+    { title: 'truncate tableについて', note: 'drop tableと何が違うの？', category_id: 7, user_id: 1, is_done: 1 },
+    { title: 'indexを張る', note: '主キーにはデフォルトで張られているらしい（mysqlの場合）', category_id: 7, user_id: 1,  is_done: 1 },
     { title: 'EC2を学ぶ', note: 'インスタンスって何？rubyのインスタンス変数とは違うっぽい', category_id: 8, user_id: 1 },
     { title: 's3やる', note: '東京リージョンにバケットを作る', category_id: 8, user_id: 1 },
     { title: 'デプロイ', note: 'quiitaの記事見ながらデプロイしてみる', category_id: 8, user_id: 1 },
