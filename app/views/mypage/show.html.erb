@@ -1,69 +1,72 @@
 <%= stylesheet_link_tag "mypage/show", :media => "all" %>
-<header>
-	<div class="header">
-		<div class="header_logo">
-			<%= image_tag 'logo.png' %>
-		</div>
-		<div class="user">
-			<div class="user_name"><%= @user.name %></div>
-			<div class="user_level">Lv.<span class="js-user_level"><%= @user.exp / 100 + 1 %></span></div>
-			<div id="exp_container" data-current-exp="<%= @user.exp %>" data-old-exp="<%= @old_exp %>"></div>
-		</div>
-		<div class="header_logo">
-			<%= image_tag 'logo.png' %>
-		</div>
+<div class="bg">
+	<div class="main_contents">
+		<header>
+			<div class="header">
+				<div class="header_logo">
+					<%= image_tag 'logo.png' %>
+				</div>
+				<div class="user">
+					<div class="user_name"><%= @user.name %></div>
+					<div class="user_level">Lv.<span class="js-user_level"><%= @user.exp / 100 + 1 %></span></div>
+					<div id="exp_container" data-current-exp="<%= @user.exp %>" data-old-exp="<%= @old_exp %>"></div>
+				</div>
+			</div>
+		</header>
+		<div class="line is-animated"></div>
+		<section class="graph">
+			<%= render partial: 'chart' %>
+		</section>
+		<section class="task_tab">
+			<div class="task_list">
+				<div class="button_area">
+					<div class="done_not">
+						未完了
+					</div>
+					<div class="done">
+						完了済
+					</div>
+					<button class="create_task">タスク作成</button>
+				</div>
+				<div class="not_done_task">
+					<% @no_complete_task_list.each do |n| %>
+					<div class="task_info">
+						<div class="task_detail">
+							<p><%= n[:title]%> | <%= n.category.name %></p>
+							<div class="comment">
+								<p>内容：</p>
+								<p><%= n[:note]%></p>
+							</div>
+						</div>
+						<div class="second_info">
+							<% unless n[:expire_date].nil? %>
+								<p class="limit">期日：</p>
+								<p class="limit_date"><%= n[:expire_date]%></p>
+							<% end %>
+							<%= button_to '完了にする', {controller: 'mypage', action: 'update'}, {method: :put, class:"done_button", params: { id: n[:id] } }  %>
+						</div>
+					</div>
+					<% end %>
+				</div>
+				<div class="done_task">
+					<% @complete_task_list.each do |c| %>
+					<div class="task_info">
+						<div class="task_detail">
+							<p><%= c[:title]%> | <%= c.category.name %></p>
+							<div class="comment">
+								<p>内容：</p>
+								<p><%= c[:note]%></p>
+							</div>
+						</div>
+					</div>
+					<% end %>
+				</div>
+			</div>
+		</section>
+		<% if @is_from_create_or_update %>
+		<%= render partial: 'macho_modal', macho_modal: @macho_modal %>
+		<% end %>
+		<%= render partial: 'task_modal', task_modal: @task_modal %>
+		<%= render partial: 'category_modal', task_modal: @category_modal %>
 	</div>
-</header>
-<div class="body">
-	<section class="graph">
-		<%= render partial: 'chart' %>
-	</section>
-	<section class="task_tab">
-		<div class="task_list">
-			<div class="button_area">
-				<div class="done_not">
-					未完了
-				</div>
-				<div class="done">
-					完了済
-				</div>
-				<button class="create_task">タスク作成</button>
-			</div>
-			<div class="not_done_task">
-				<% @no_complete_task_list.each do |n| %>
-				<div class="task_info">
-					<div class="task_detail">
-						<p><%= n[:title]%> | <%= n.category.name %></p>
-						<div class="comment">
-							<p>内容：</p>
-							<p><%= n[:note]%></p>
-						</div>
-					</div>
-					<div class="second_info">
-						<p class="limit">期日：</p><p class="limit_date"><%= n[:expire_date]%></p>
-						<%= button_to '完了にする', {controller: 'mypage', action: 'update'}, {method: :put, class:"done_button", params: { id: n[:id] } }  %>
-					</div>
-				</div>
-				<% end %>
-			</div>
-			<div class="done_task">
-				<% @complete_task_list.each do |c| %>
-				<div class="task_info">
-					<div class="task_detail">
-						<p><%= c[:title]%> | <%= c.category.name %></p>
-						<div class="comment">
-							<p>内容：</p>
-							<p><%= c[:note]%></p>
-						</div>
-					</div>
-				</div>
-				<% end %>
-			</div>
-		</div>
-	</section>
 </div>
-<% if @is_from_create_or_update %>
-	<%= render partial: 'macho_modal', macho_modal: @macho_modal %>
-<% end %>
-<%= render partial: 'task_modal', task_modal: @task_modal %>
-<%= render partial: 'category_modal', task_modal: @category_modal %>
