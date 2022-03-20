@@ -7,7 +7,7 @@ class HomeController < ApplicationController
 			exist_user = User.find_by(token: token)
 
 			if (exist_user) 
-				redirect_to mypage_show_path
+				return redirect_to mypage_show_path
 			end
 		end
 	end
@@ -23,6 +23,12 @@ class HomeController < ApplicationController
 		cookies[:token] = token
 
 		redirect_to mypage_show_path
+	end
+
+	def guest
+		cookies[:token] = 'z9sAhRvH'
+
+		return redirect_to mypage_show_path
 	end
 
 	private

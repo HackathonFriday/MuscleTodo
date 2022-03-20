@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   root 'home#index'
   post 'home/index', to: 'home#create'
+  post 'home/guest', to: 'home#guest'
 
 end

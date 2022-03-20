@@ -1,44 +1,68 @@
-div.box{
-	margin: 50vh auto 0;
-	transform: translateY(-50%);
-	padding: 1em;
-	width: 30%;
-	border: 1px solid #ccc; /* 枠線 */
-	background-color: #fff; /* 背景色 */
-	box-shadow: 1px 1px 2px #ccc;
+div.box {
+    margin: 50vh auto 0;
+    transform: translateY(-50%);
+    padding: 1em;
+    width: 30%;
+    border: 1px solid #ccc; /* 枠線 */
+    background-color: #fff; /* 背景色 */
+    box-shadow: 1px 1px 2px #ccc;
 }
-h2{
-	text-align: center;
-}
-
-.field{
-	margin: 15px;
+h2 {
+    text-align: center;
 }
 
-.name{
-	margin-bottom: 15px;
-}
-input[type="text"]{
-	min-height: 30px;
-	border: 1px solid #a9a9a9; /* 枠線 */
-	background-color: #fff; /* 背景色 */
-}
-	::placeholder{
-		color: #a9a9a9;
-		font-size: 0.8em;
-	}
-
-.radio_button{
-margin: 0px, 5px;
+.field {
+    margin: 15px;
 }
 
-.register{
-	margin: 10px;
-	text-align: right;
+.name {
+    margin-bottom: 15px;
 }
-input[type="submit"]{
-	font-size: 10px;
-	width: 100px;
-	height: 30px;
-	cursor: pointer;
+input[type='text'] {
+    min-height: 30px;
+    border: 1px solid #a9a9a9; /* 枠線 */
+    background-color: #fff; /* 背景色 */
+}
+::placeholder {
+    color: #a9a9a9;
+    font-size: 0.8em;
+}
+
+.radio_button {
+    margin: 0px, 5px;
+}
+
+.register {
+    margin: 10px;
+    text-align: right;
+}
+input[type='submit'] {
+    font-size: 10px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.input_wrapper {
+    margin-left: 20%;
+}
+
+.submit_buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+
+    .register_btn {
+        background: limegreen;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .guest_btn {
+        background: orange;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+    }
 }

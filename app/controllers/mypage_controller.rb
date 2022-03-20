@@ -5,7 +5,7 @@ class MypageController < ApplicationController
     @user = User.find_by(token: token)
 
     if @user.nil?
-      redirect_to home_index_path
+      return redirect_to root_path
     end
 
     # タスク追加もしくは完了後の遷移であれば、マッチョモーダル表示処理をする
