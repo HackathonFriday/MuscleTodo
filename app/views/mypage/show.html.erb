@@ -59,6 +59,8 @@
 		</div>
 	</section>
 </div>
-<%= render partial: 'macho_modal', macho_modal: @macho_modal %>
+<% if @is_from_create_or_update %>
+	<%= render partial: 'macho_modal', macho_modal: @macho_modal %>
+<% end %>
 <%= render partial: 'task_modal', task_modal: @task_modal %>
 <%= render partial: 'category_modal', task_modal: @category_modal %>

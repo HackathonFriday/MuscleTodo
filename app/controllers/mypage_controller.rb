@@ -8,16 +8,29 @@ class MypageController < ApplicationController
       redirect_to home_index_path
     end
 
-    # マッチョモーダル用の変数取得
-    is_creation_flg = false
+    # タスク追加もしくは完了後の遷移であれば、マッチョモーダル表示処理をする
+    @is_from_create_or_update = false
 
-    characters = Character.pluck(:image_path)
-    phrases = Phrase.where(is_creation: is_creation_flg).pluck(:content)
+    unless params[:is_creation_flg].nil?
+      if params[:is_creation_flg] =~ /(true|True|TRUE)/
+        is_creation_flg = true
+      else
+        is_creation_flg = false
+      end
 
-    character = characters.sample
-    phrase = phrases.sample
+      @is_from_create_or_update = true
 
-    @macho_modal = {'path' => character, 'phrase' => phrase, 'is_creation_flg' => is_creation_flg}
+      # マッチョモーダル用の変数取得
+      characters = Character.pluck(:image_path)
+      phrases = Phrase.where(is_creation: is_creation_flg).pluck(:content)
+
+      character = characters.sample
+      phrase = phrases.sample
+
+      logger.debug(params[:is_creation_flg])
+
+      @macho_modal = {'path' => character, 'phrase' => phrase, 'is_creation_flg' => is_creation_flg}
+    end
     # ここまで
 
     # タスク作成追加画面（モーダル表示）用の変数
@@ -48,7 +61,7 @@ class MypageController < ApplicationController
     @task = Task.create(task_params)
     @task.user_id = @user.id;
     if @task.save
-      redirect_to action: :show, is_creation_flg: false
+      redirect_to action: :show, is_creation_flg: true
     end
   end
 
@@ -64,7 +77,7 @@ class MypageController < ApplicationController
     user.exp += rand(30..70)
     user.save
 
-    redirect_to action: :show, old_exp: old_exp, is_creation_flg: true
+    redirect_to action: :show, old_exp: old_exp, is_creation_flg: false
   end
 
   private
