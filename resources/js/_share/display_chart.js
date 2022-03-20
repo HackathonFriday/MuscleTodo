@@ -118,7 +118,7 @@ export default class displayChart {
             title: {
                 display: true,
                 text: 'カテゴリごとの完了率',
-                fontSize: 18,
+                fontSize: 30,
             },
         };
 
@@ -174,7 +174,7 @@ export default class displayChart {
             title: {
                 display: true,
                 text: '完了タスク内訳',
-                fontSize: 18,
+                fontSize: 30,
             },
         };
 
