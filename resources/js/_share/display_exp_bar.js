@@ -1,12 +1,12 @@
 // 参照：
 // https://progressbarjs.readthedocs.io/en/latest/api/shape/
 export default class displayExpBar {
-    constructor() {
+    constructor(levelTagName, expContainerName) {
         this.animationDuration = 500;
-        this.level = document.querySelector('.js-user_level');
-
         this.ProgressBar = require('progressbar.js');
-        this.expContainer = document.querySelector('#exp_container');
+
+        this.level = document.querySelector(levelTagName);
+        this.expContainer = document.querySelector(expContainerName);
 
         this.currentExp = Number(this.expContainer.dataset.currentExp);
         this.oldExp = Number(this.expContainer.dataset.oldExp);

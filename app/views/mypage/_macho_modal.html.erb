@@ -17,6 +17,10 @@
                     <%= image_tag @macho_modal['path'], class:"keyframe animation" %>
                 </div>
             </div>
+            <div class="modal_exp_wrapper">
+                <div class="modal_user_level">Lv.<span class="js-modal_user_level"><%= @user.exp / 100 + 1 %></span></div>
+                <div id="exp_modal_container" data-current-exp="<%= @user.exp %>" data-old-exp="<%= @old_exp %>"></div>
+            </div>
         </div>
     </div>
 </div>
