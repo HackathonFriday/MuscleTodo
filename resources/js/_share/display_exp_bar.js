@@ -8,6 +8,8 @@ export default class displayExpBar {
         this.level = document.querySelector(levelTagName);
         this.expContainer = document.querySelector(expContainerName);
 
+        if (!this.level || !this.expContainer) return;
+
         this.currentExp = Number(this.expContainer.dataset.currentExp);
         this.oldExp = Number(this.expContainer.dataset.oldExp);
     }
