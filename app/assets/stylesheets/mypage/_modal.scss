@@ -103,28 +103,28 @@
     margin: 0 !important;
     line-height: 1.5;
     /*   align-items: center; */
-}
 
-.says p {
-    margin: 8px 0 0 !important;
-    font-size: 25px;
-    font-weight: bold;
-}
+    & p {
+        margin: 8px 0 0 !important;
+        font-size: 25px;
+        font-weight: bold;
+    }
 
-.says p:first-child {
-    margin-top: 0 !important;
-    font-size: 25px;
-    font-weight: bold;
-}
+    & p:first-child {
+        margin-top: 0 !important;
+        font-size: 25px;
+        font-weight: bold;
+    }
 
-.says:after {
-    content: "";
-    position: absolute;
-    border: 10px solid transparent;
-    /*   margin-top:-3px;  */
-}
+    &:after {
+        content: "";
+        position: absolute;
+        border: 10px solid transparent;
+        /*   margin-top:-3px;  */
 
-.balloon .says:after {
-    right: -26px;
-    border-left: 22px solid #99dddd;
+        &:after {
+            right: -26px;
+            border-left: 22px solid #99dddd;
+        }
+    }
 }
