@@ -43,3 +43,4 @@
 3. docker-compose exec web bundle install
 4. docker-compose exec web rails db:create
 5. docker-compose exec web rails db:migrate
+6. docker-compose exec web rails db:seed（デモモードを使用する場合）
