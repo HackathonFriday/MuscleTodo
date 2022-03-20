@@ -39,6 +39,8 @@ class MypageController < ApplicationController
     @task = Task.create(task_params)
     @task.user_id = @user.id;
 
+    @task.save
+
     @is_from_create_or_update = true
 
     # ここから必要なものを取得する
