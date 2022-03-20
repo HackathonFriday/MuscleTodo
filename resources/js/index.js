@@ -8,5 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     new displayChart(userId).run();
 
-    new displayExpBar().run();
+    new displayExpBar('.js-user_level', '#exp_container').run();
+    new displayExpBar('.js-modal_user_level', '#exp_modal_container').run();
 });

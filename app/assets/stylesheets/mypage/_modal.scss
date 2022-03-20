@@ -118,7 +118,7 @@
 }
 
 .says:after {
-    content: "";
+    content: '';
     position: absolute;
     border: 10px solid transparent;
     /*   margin-top:-3px;  */
@@ -127,4 +127,17 @@
 .balloon .says:after {
     right: -26px;
     border-left: 22px solid #99dddd;
+}
+
+.modal_exp_wrapper {
+    position: relative;
+    bottom: -20px;
+}
+
+.modal_user_level {
+    font-size: 20px;
+}
+
+#exp_modal_container {
+    height: 30px;
 }

@@ -9,13 +9,17 @@
             </p>
             <div class="mainarea">
                 <div class="textarea">
-                <div class="balloon">
-                    <div class="says"><p><%= @macho_modal['phrase'] %></p></div>
-                </div>
+                    <div class="balloon">
+                        <div class="says"><p><%= @macho_modal['phrase'] %></p></div>
+                    </div>
                 </div>
                 <div class="mainimg">
                     <%= image_tag @macho_modal['path'] %>
                 </div>
+            </div>
+            <div class="modal_exp_wrapper">
+                <div class="modal_user_level">Lv.<span class="js-modal_user_level"><%= @user.exp / 100 + 1 %></span></div>
+                <div id="exp_modal_container" data-current-exp="<%= @user.exp %>" data-old-exp="<%= @old_exp %>"></div>
             </div>
         </div>
     </div>
