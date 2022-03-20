@@ -55,6 +55,8 @@ class MypageController < ApplicationController
     @complete_task_list = task_list.where(is_done: true).to_a;
     @categories = Category.where('user_id IS NULL OR user_id = ?', @user.id)
 
+    @old_exp = @user.exp
+
     # マッチョモーダル用の変数取得
     characters = Character.pluck(:image_path)
     phrases = Phrase.where(is_creation: is_creation_flg).pluck(:content)
@@ -76,7 +78,7 @@ class MypageController < ApplicationController
     token = cookies[:token]
     user = User.find_by(token: token)
 
-    old_exp = user.exp
+    @old_exp = user.exp
 
     user.exp += rand(30..70)
     user.save
