@@ -1,4 +1,5 @@
 # README
+![image](https://user-images.githubusercontent.com/66816003/159145148-4e53927f-d3be-4e79-8bb0-f29505796575.png)
 
 ## Muscle To Doとは
 ---
@@ -10,6 +11,7 @@
 - 君のプログラミング学習を、アツいマッチョたちが応援してくれるぞ！！
 - タスクの完了度合いをグラフで確認可能
 - タスクを達成するたびに経験値を獲得！目指せカンスト
+![ muscle_level_up](https://user-images.githubusercontent.com/66816003/159145081-a60c7f57-2e33-4eb2-b7f0-caedcf87af79.gif)
 
 ### 使用技術
 ---
