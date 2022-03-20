@@ -12,9 +12,14 @@ class MypageController < ApplicationController
     @is_from_create_or_update = false
 
     unless params[:is_creation_flg].nil?
-      is_creation_flg = params[:is_creation_flg]
+      if params[:is_creation_flg] =~ /(true|True|TRUE)/
+        is_creation_flg = true
+      else
+        is_creation_flg = false
+      end
+
       @is_from_create_or_update = true
-    
+
       # マッチョモーダル用の変数取得
       characters = Character.pluck(:image_path)
       phrases = Phrase.where(is_creation: is_creation_flg).pluck(:content)
