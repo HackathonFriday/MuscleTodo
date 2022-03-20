@@ -30,7 +30,7 @@
 				<% @no_complete_task_list.each do |n| %>
 				<div class="task_info">
 					<div class="task_detail">
-						<p><%= n[:title]%> | <%= n[:category_id]%></p>
+						<p><%= n[:title]%> | <%= n.category.name %></p>
 						<div class="comment">
 							<p>内容：</p>
 							<p><%= n[:note]%></p>
@@ -47,7 +47,7 @@
 				<% @complete_task_list.each do |c| %>
 				<div class="task_info">
 					<div class="task_detail">
-						<p><%= c[:title]%> | <%= c[:category_id]%></p>
+						<p><%= c[:title]%> | <%= c.category.name %></p>
 						<div class="comment">
 							<p>内容：</p>
 							<p><%= c[:note]%></p>
