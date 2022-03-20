@@ -62,7 +62,7 @@ class MypageController < ApplicationController
     character = characters.sample
     phrase = phrases.sample
 
-    @macho_modal = {'path' => character, 'phrase' => phrase, 'is_creation_flg' => is_creation_flg}
+    @macho_modal = {'path' => character, 'phrase' => phrase, 'is_creation_flg' => is_creation_flg, 'user_name' => @user.name}
 
     # if @task.save
       render :show
