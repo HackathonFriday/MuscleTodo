@@ -1,4 +1,10 @@
 # README
+
+WEBCAMP ENGINEER COMMUNITY HACKATHONで作成した作品です。
+
+[紹介ページ](https://wec-hackathon.studio.site/#awards)
+
+
 ![image](https://user-images.githubusercontent.com/66816003/159145148-4e53927f-d3be-4e79-8bb0-f29505796575.png)
 
 ## Muscle To Doとは
@@ -38,9 +44,16 @@
 
 ### 環境構築手順
 ---
-1. githubからmuscletodoをcloneする
-2. docker-compose up -d
-3. docker-compose exec web bundle install
-4. docker-compose exec web rails db:create
-5. docker-compose exec web rails db:migrate
-6. docker-compose exec web rails db:seed（デモモードを使用する場合）
+方法1. このページにあるbuild.hsを実行する
+
+方法2. 下記を順に実行する
+
+1. 任意のディレクトリで git clone git@github.com:HackathonFriday/MuscleTodo.git
+2. cd MuscleTodo
+3. docker compose up -d
+4. docker compose exec web bundle install
+5. docker compose exec web rails db:create
+6. docker compose exec web rails db:migrate
+7. docker compose exec web rails db:seed（デモモードを使用する場合）
+
+SQLにログインする際のusernameとpasswordはdatabase.ymlに記載してあります。
