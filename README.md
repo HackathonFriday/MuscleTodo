@@ -44,7 +44,7 @@ WEBCAMP ENGINEER COMMUNITY HACKATHONで作成した作品です。
 
 ### 環境構築手順
 ---
-方法1. このページにあるbuild.hsを実行する
+方法1. このページにあるbuild.shを実行する
 
 方法2. 下記を順に実行する
 
